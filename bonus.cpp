@@ -19,11 +19,8 @@ int main()
       string number = to_string(n);
       for(int i = 0; i < number.size(); i++)
       {
-        //cout << number.substr(i,i+1) << endl;
         digits.push_back(stoi(number.substr(i,1)));
       }
-      //digits.push_back(stoi(number.substr(0,1)));
-      //digits.push_back(stoi(number.substr(1)));
       for(int k = 0; k < digits.size(); k++)
       {
         sum+=digits.at(k);
