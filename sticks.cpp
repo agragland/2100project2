@@ -37,6 +37,38 @@ int calculateLargestNumber(int sticks)
   return largestVal;
 }
 
+int calculateSmallestNumber(int sticks)
+{
+  int totalSticks = sticks;
+  int currSticks = 0;
+  string ret = "";
+  int largestVal;
+  while(sticks != 0)
+  {
+    currSticks = 0;
+    currSticks++;
+    sticks--;
+    while(currSticks != 0)
+    {
+    currSticks++;
+    sticks--;
+
+      for(int i = 7; i >= 0; i--)
+      {
+
+        if((currSticks % i == 0) && sticks != 1 && currSticks != 0)
+        {
+          ret = to_string() + ret;
+          //convert the stick numbers to a vector find the index of the (i) and return it as the value
+          currSticks = 0;
+        }
+      }
+    }
+  }
+  largestVal = stoi(ret);
+  return largestVal;
+}
+
 
 
 int main()
