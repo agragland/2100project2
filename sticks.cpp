@@ -3,7 +3,7 @@
 #include <vector>
 
 using namespace std;
-int stickNumbers[] = {6,2,5,5,4,5,6,3,7,6};
+vector<int> stickNumbers{6,2,5,5,4,5,6,3,7,6};
 
 int calculateLargestNumber(int sticks)
 {
@@ -25,7 +25,7 @@ int calculateLargestNumber(int sticks)
       for(int i = 0; i < 10; i++)
       {
 
-        if((currSticks % stickNumbers[i] == 0) && sticks != 1 && currSticks != 0)
+        if((currSticks % stickNumbers.at(i) == 0) && sticks != 1 && currSticks != 0)
         {
           ret = to_string(i) + ret;
           currSticks = 0;
@@ -53,13 +53,12 @@ int calculateSmallestNumber(int sticks)
     currSticks++;
     sticks--;
 
-      for(int i = 7; i >= 0; i--)
+      for(int i = 7; i > 0; i--)
       {
 
         if((currSticks % i == 0) && sticks != 1 && currSticks != 0)
         {
-          ret = to_string() + ret;
-          //convert the stick numbers to a vector find the index of the (i) and return it as the value
+          ret = to_string(stickNumbers.find(i)) + ret;
           currSticks = 0;
         }
       }
