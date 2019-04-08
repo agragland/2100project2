@@ -32,7 +32,6 @@ int main()
       }
       else
       {
-        //cout << digits.size() << endl;
         sum = 0;
         n++;
         digits.clear();
