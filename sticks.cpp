@@ -33,7 +33,7 @@ string calculateLargestNumber(int sticks)
 			}
 		}
 	}
-	
+
 	return ret;
 }
 
@@ -45,7 +45,7 @@ int calculateSmallestNumber(int sticks)
 	int currSticks = 0;
 	string ret = "";
 	int smallestVal;
-	
+
 	int numofeights;
 	int remainder = sticks % 7;
 	if (sticks == 3)
@@ -71,7 +71,7 @@ int calculateSmallestNumber(int sticks)
 	}
 	else if (remainder == 3)
 	{
-		numofeights = (sticks - 14 - remainder) / 7; 
+		numofeights = (sticks - 14 - remainder) / 7;
 	}
 	else
 	{
