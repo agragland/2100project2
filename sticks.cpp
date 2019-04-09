@@ -39,30 +39,28 @@ string calculateLargestNumber(int sticks)
 
 
 
-int calculateSmallestNumber(int sticks)
+string calculateSmallestNumber(int sticks)
 {
 	int totalSticks = sticks;
 	int currSticks = 0;
 	string ret = "";
-	int smallestVal;
-
 	int numofeights;
 	int remainder = sticks % 7;
 	if (sticks == 3)
 	{
-		return 7;
+		return "7";
 	}
 	else if (sticks == 4)
 	{
-		return 4;
+		return "4";
 	}
 	else if (sticks == 5)
 	{
-		return 2;
+		return "2";
 	}
 	else if (sticks == 6)
 	{
-		return 6;
+		return "6";
 	}
 
 	if(remainder <= 4 && remainder >= 1 && remainder != 2 && remainder != 3)
@@ -106,8 +104,7 @@ int calculateSmallestNumber(int sticks)
 		ret = "6" + ret;
 	}
 
-	smallestVal = stoi(ret);
-	return smallestVal;
+	return ret;
 }
 
 
@@ -117,12 +114,16 @@ int main()
 	int sticks = 0;
 	cout << "Enter a number of sticks between 2 and 100: " << endl;
 	cin >> sticks;
-	if (sticks < 100)
+	if ((sticks <= 100) && (sticks > 1))
 	{
 		string largestNum = calculateLargestNumber(sticks);
-		int smallestNum = calculateSmallestNumber(sticks);
+		string smallestNum = calculateSmallestNumber(sticks);
 
 		cout << "Largest Val: " << largestNum << endl;
 		cout << "Smallest Val: " << smallestNum << endl;
+	}
+	else
+	{
+		cout << "The number of sticks entered exceeds the upper (100) and lower (1) limits. Please try again." << endl;
 	}
 }
