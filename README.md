@@ -4,9 +4,9 @@ Functional Requirements:
 
 1. The user shall be able to add, view, edit, and delete their contacts
 
-1.1 The system shall require one of the following information from the user to create a contact: Name, Address, Email, Phone Number, or Picture.
+**1.1** The system shall require one of the following information from the user to create a contact: Name, Address, Email, Phone Number, or Picture.
 
-1.1.1. The system shall not create a contact if all of the following information is blank: Name, Address, Email, Phone Number, and Picture.
+**1.1.1.** The system shall not create a contact if all of the following information is blank: Name, Address, Email, Phone Number, and Picture.
 
 1.2. The system shall allow the user to view a contact by clicking on the tab corresponding to the contact organization.
 
